@@ -4,15 +4,34 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { VistaTablaComponent } from '../app/features/feature/vista-tabla/vista-tabla.component';
+import { AuthInterceptorService } from './filtrar-http/auth-interceptor.service';
+import { FeatureComponent } from './features/feature/feature.component';
+import { LoginComponent } from '../app/features/feature/login/login.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    VistaTablaComponent,
+    FeatureComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+   {
+     provide: HTTP_INTERCEPTORS,
+     useClass: AuthInterceptorService,
+     multi: true
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
