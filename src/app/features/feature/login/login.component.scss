@@ -101,6 +101,7 @@ form {
     color: #999;
     font-size: 18px;
     transition: .3s;
+    opacity: 56%;
 }
 
 .input-div:before,
@@ -160,6 +161,15 @@ a {
     text-align: right;
     text-decoration: none;
     color: #999;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+
+.validar-mensaje {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: rgb(204, 17, 17);
     font-size: 0.9rem;
     transition: .3s;
 }

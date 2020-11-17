@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { ServicesGeneralService } from '../../../http/services/services-general.service';
 import { UserModel } from '../../../models/user.model';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,15 +14,18 @@ import Swal from 'sweetalert2';
 export class LoginComponent implements OnInit {
 
   public form: FormGroup;
+  public usuarioModel: UserModel;
 
   constructor(
     private fb: FormBuilder,
-    private servicesGeneral: ServicesGeneralService
+    private servicesGeneral: ServicesGeneralService,
+    private router: Router
   ) {
     this.inicializarFormulario();
    }
 
   ngOnInit(): void {
+    this.usuarioModel = new UserModel();
   }
 
   public inicializarFormulario(){
@@ -44,10 +48,23 @@ export class LoginComponent implements OnInit {
   }
 
   public validarIngreso(){
-    const datos = new UserModel();
-    this.servicesGeneral.consultarUsuario(datos).subscribe(dato => {
-      console.log(dato);
-    });
+    console.log(this.form.valid);
+
+    if (this.form.valid) {
+      // this.usuarioModel = new UserModel();
+      // this.usuarioModel.usuario = this.usuario.value;
+      // this.usuarioModel.contrasena = this.contrasena.value.
+
+      // this.servicesGeneral.consultarUsuario(1).subscribe(dato => {
+      //   console.log(dato);
+      // });
+      this.respuestaSuccess();
+      this.router.navigate(['/Lista-usuario']);
+    }else{
+      this.respuestaError();
+    }
+    
+    // const datos = new UserModel();
   }
 
   private respuestaSuccess(){

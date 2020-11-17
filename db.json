@@ -1,0 +1,62 @@
+{
+    "registros": [{
+            "id_caso": 467,
+            "fecha_notificacion": "2020-03-22T00:00:00.000+00:00",
+            "codigo_DIVIPOLA": 54001,
+            "ciudad_ubicacion": "Cúcuta",
+            "departamento_Distrito": "Norte de Santander",
+            "atencion": "Recuperado",
+            "edad": 33,
+            "sexo": "M",
+            "tipo": "Importado",
+            "estado": "Asintomático",
+            "pais_procedencia": "VENEZUELA",
+            "fis": null,
+            "fecha_muerte": null,
+            "fecha_diagnostico": "2020-03-25T00:00:00.000+00:00",
+            "fecha_recuperado": "2020-04-08T00:00:00.0"
+
+        },
+        {
+            "id_caso": 467,
+            "fecha_notificacion": "2020-03-22T00:00:00.000+00:00",
+            "codigo_DIVIPOLA": 54001,
+            "ciudad_ubicacion": "Cúcuta",
+            "departamento_Distrito": "Norte de Santander",
+            "atencion": "Recuperado",
+            "edad": 33,
+            "sexo": "M",
+            "tipo": "Importado",
+            "estado": "Asintomático",
+            "pais_procedencia": "VENEZUELA",
+            "fis": null,
+            "fecha_muerte": null,
+            "fecha_diagnostico": "2020-03-25T00:00:00.000+00:00",
+            "fecha_recuperado": "2020-04-08T00:00:00.0"
+        }
+    ],
+    "usuarios": [{
+            "id": 1,
+            "usuario": "test1",
+            "clave": "1"
+        },
+        {
+            "id": 2,
+            "usuario": "test2",
+            "clave": "2"
+        },
+        {
+            "id": 3,
+            "usuario": "test3",
+            "clave": "3"
+        },
+        {
+            "id": 4,
+            "usuario": "test4",
+            "clave": "4"
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
+}
