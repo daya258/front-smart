@@ -1,0 +1,13 @@
+{
+    "posts": [{
+        "nombre": "'Dayanna'",
+        "apellido": "Gomez",
+        "ciudad": "Medellin",
+        "caso": 224,
+        "id": "cedula",
+        "tipo": "grave"
+    }],
+    "usuario": {
+        "name": "typicode"
+    }
+}
