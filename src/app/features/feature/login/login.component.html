@@ -1,12 +1,12 @@
 <img class="wave" src="../../../assets/img/wave.png">
 <div class="container">
     <div class="img">
-        <img src="../../../assets/img/medicine.svg">
+        <img src="../../../assets/img/medicine.png">
     </div>
     <div class="login-content">
         <form [formGroup]="form">
             <img src="../../../assets/img/avatar.svg">
-            <h2 class="title">Welcome</h2>
+            <h2 class="title">Bienvenido</h2>
             <div class="input-div one">
                 <div class="i">
                     <i class="fas fa-user"></i>
@@ -16,7 +16,7 @@
                     <input placeholder="Usuario" type="text" formControlName="usuario" class="input">
                 </div>
             </div>
-            <a class="validar-mensaje" href="#">Error de usuario</a>
+            <!-- <a class="validar-mensaje" href="#">Error de usuario</a> -->
             <div class="input-div pass">
                 <div class="i">
                     <i class="fas fa-lock"></i>
@@ -26,8 +26,8 @@
                     <input placeholder="Contraseña" type="password" formControlName="contrasena" class="input">
                 </div>
             </div>
-            <a class="validar-mensaje" href="#">Error de Password</a>
-            <input type="submit" (click)="validarIngreso()  " class="btn" value="Login">
+            <!-- <a class="validar-mensaje" href="#">Error de Password</a> -->
+            <input type="submit" (click)="validarIngreso()  " class="btn" value="Ingresar">
         </form>
     </div>
 </div>

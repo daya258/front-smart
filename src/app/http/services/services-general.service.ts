@@ -3,13 +3,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs'; 
 import { UserModel } from '../../models/user.model';
 import { ResoltadoCovidModel } from '../../models/resultados-covid.model';
+import { AnalisisModel } from '../../models/analisis.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesGeneralService {
   // protected urlApi = 'https://iush-app.herokuapp.com/autenticacion';
-  protected urlApi = 'http://localhost:3000/usuarios';
+  protected urlApi = 'http://localhost:3000/analisis';
   protected urlApiRegistros = ' http://localhost:3000/registros';
 
 
@@ -21,9 +22,6 @@ export class ServicesGeneralService {
 
   public consultarServUsuarios(){
     return this.http.get<UserModel[]>(this.urlApi);
-  }
-  public consultarUsuario(id: any){
-    return this.http.get<UserModel>(this.urlApi + '/' + 1);
   }
 
   // let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
@@ -46,5 +44,15 @@ export class ServicesGeneralService {
 
   public consultarRegistros(){
     return this.http.get<ResoltadoCovidModel[]>(this.urlApiRegistros + '/');
+  }
+
+  public consultarAnalisis(){
+    return this.http.get<AnalisisModel[]>(this.urlApi + '/');
+  }
+
+
+  // tslint:disable-next-line: adjacent-overload-signatures
+  public consultarUsuario(usuario: UserModel){
+    return this.http.post<UserModel[]>(this.urlApi, usuario);
   }
 }

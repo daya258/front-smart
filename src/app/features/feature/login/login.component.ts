@@ -51,12 +51,15 @@ export class LoginComponent implements OnInit {
     console.log(this.form.valid);
 
     if (this.form.valid) {
-      // this.usuarioModel = new UserModel();
+      this.usuarioModel = new UserModel();
       // this.usuarioModel.usuario = this.usuario.value;
-      // this.usuarioModel.contrasena = this.contrasena.value.
+      // this.usuarioModel.contrasena = this.contrasena.value;
 
-      // this.servicesGeneral.consultarUsuario(1).subscribe(dato => {
-      //   console.log(dato);
+      // this.servicesGeneral.consultarUsuario(this.usuarioModel).subscribe(dato => {
+        // TODO SE DEBE HACER VALIDACION
+        // if(s){
+
+        // }
       // });
       this.respuestaSuccess();
       this.router.navigate(['/Lista-usuario']);
