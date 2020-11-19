@@ -1,7 +1,7 @@
 <div class="m-3">
     <h1>Tabla de reportes</h1>
 </div>
-<div class="m-5">
+<!-- <div class="m-5">
     <table class="table table-hover">
         <thead>
             <tr>
@@ -37,9 +37,9 @@
 </div>
 <span class="badge badge-warning m-4">Filtro de enfermos</span>
 <span class="badge badge-info m-4">Filtro de fallecidos</span>
-<span class="badge badge-primary m-4">Filtro de contagios</span>
+<span class="badge badge-primary m-4">Filtro de contagios</span> -->
 
-<div class="row justify-content-md-center">
+<!-- <div class="row justify-content-md-center">
     <div class="col md-6">
         <div class="m-5">
             <table class="table table-hover">
@@ -81,31 +81,30 @@
 
     </div>
 
-</div>
+</div> -->
 
 
-
-<!-- <p-table [value]="registros" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
-        <ng-template pTemplate="header">
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Ciudad ubicación</th>
-                <th scope="col">Edad</th>
-                <th scope="col">Estado</th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-item>
-            <tr>
-                <th scope="row">{{ item.id_caso}}</th>
-                <th scope="row">{{ item.ciudad_ubicacion}}</th>
-                <th scope="row">{{ item.edad}}</th>
-                <th scope="row">{{ item.atencion}}</th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="paginatorleft">
-            <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
-        </ng-template>
-        <ng-template pTemplate="paginatorright">
-            <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
-        </ng-template>
-    </p-table> -->
+<p-table [value]="registros" #tablaVista [paginator]="true" [rows]="10" [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+    <ng-template pTemplate="header">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Ciudad ubicación</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Estado</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+        <tr>
+            <th scope="row">{{ item.id_caso}}</th>
+            <th scope="row">{{ item.ciudad_ubicacion}}</th>
+            <th scope="row">{{ item.edad}}</th>
+            <th scope="row">{{ item.atencion}}</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="paginatorleft">
+        <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+    </ng-template>
+    <ng-template pTemplate="paginatorright">
+        <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+    </ng-template>
+</p-table>

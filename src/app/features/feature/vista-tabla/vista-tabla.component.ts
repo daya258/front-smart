@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ServicesGeneralService } from '../../../http/services/services-general.service';
 import { ResoltadoCovidModel } from '../../../models/resultados-covid.model';
 import { AnalisisModel } from '../../../models/analisis.model';
+import { Table } from 'primeng/table';
 
 @Component({
   selector: 'app-vista-tabla',
@@ -9,6 +10,8 @@ import { AnalisisModel } from '../../../models/analisis.model';
   styleUrls: ['./vista-tabla.component.scss']
 })
 export class VistaTablaComponent implements OnInit {
+
+  // @ViewChild('tablaVista') tablaVista:Table;
  public registros:ResoltadoCovidModel[] = [];
  public registrosAnalisis:AnalisisModel[] = [];
 
