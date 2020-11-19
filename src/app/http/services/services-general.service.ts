@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs'; 
 import { UserModel } from '../../models/user.model';
+import { ResoltadoCovidModel } from '../../models/resultados-covid.model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,8 @@ import { UserModel } from '../../models/user.model';
 export class ServicesGeneralService {
   // protected urlApi = 'https://iush-app.herokuapp.com/autenticacion';
   protected urlApi = 'http://localhost:3000/usuarios';
+  protected urlApiRegistros = ' http://localhost:3000/registros';
+
 
   protected datosMasivos = 'https://datos.gov.co/resource/gt2j-8ykr.json?fecha_reporte_web=11/11/2020%200:00:00&$limit=1000&$offset=100https://datos.gov.co/resource/gt2j-8ykr.json?fecha_reporte_web=11/11/2020%200:00:00&$limit=200&$offset=100'
   public usuario: UserModel = null;
@@ -39,5 +42,9 @@ export class ServicesGeneralService {
 
   public getUsuario(){
     return this.usuario;
+  }
+
+  public consultarRegistros(){
+    return this.http.get<ResoltadoCovidModel[]>(this.urlApiRegistros + '/');
   }
 }

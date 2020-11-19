@@ -10,12 +10,8 @@ export class UsuarioGuardService implements CanActivate {
     private router: Router) {}
 
   canActivate() {
-<<<<<<< HEAD
-    if (true) {
-=======
     //if (this.usuarioStore.getUsuario()) {
        if (true) {
->>>>>>> dd7220a9e20ccd3868b6d614a5dde3e2636cdd38
       return true;
     } else {
       this.router.navigateByUrl('/');
