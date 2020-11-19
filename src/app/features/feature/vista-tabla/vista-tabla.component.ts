@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesGeneralService } from '../../../http/services/services-general.service';
+import { ResoltadoCovidModel } from '../../../models/resultados-covid.model';
 
 @Component({
   selector: 'app-vista-tabla',
@@ -7,7 +8,7 @@ import { ServicesGeneralService } from '../../../http/services/services-general.
   styleUrls: ['./vista-tabla.component.scss']
 })
 export class VistaTablaComponent implements OnInit {
-
+ public registros:ResoltadoCovidModel[] = [];
   constructor(
     private listUsariosService: ServicesGeneralService
   ) {
@@ -18,7 +19,9 @@ export class VistaTablaComponent implements OnInit {
   }
 
   private listarUsuarios(){
-this.listUsariosService.consultarServUsuarios().subscribe(dato => {
+this.listUsariosService.consultarRegistros().subscribe(dato => {
+  this.registros = [];
+  this.registros = dato;
   console.log(dato);
 });
   }
