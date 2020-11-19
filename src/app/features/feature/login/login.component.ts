@@ -74,7 +74,7 @@ export class LoginComponent implements OnInit {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: 'Your work has been saved',
+      title: 'Ingresaste satisfactorimente',
       showConfirmButton: false,
       timer: 1500
     });
@@ -83,9 +83,9 @@ export class LoginComponent implements OnInit {
   private respuestaError(){
     Swal.fire({
       icon: 'error',
-      title: 'Oops...',
-      text: 'Something went wrong!',
-      footer: '<a href>Why do I have this issue?</a>'
+      title: 'Error...',
+      text: 'Ingresa la información solictada',
+      footer: '<a href>Revizaste la informacion?</a>'
     });
   }
 
