@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesGeneralService } from '../../../http/services/services-general.service';
 import { ResoltadoCovidModel } from '../../../models/resultados-covid.model';
+import { AnalisisModel } from '../../../models/analisis.model';
 
 @Component({
   selector: 'app-vista-tabla',
@@ -9,10 +10,13 @@ import { ResoltadoCovidModel } from '../../../models/resultados-covid.model';
 })
 export class VistaTablaComponent implements OnInit {
  public registros:ResoltadoCovidModel[] = [];
+ public registrosAnalisis:AnalisisModel[] = [];
+
   constructor(
     private listUsariosService: ServicesGeneralService
   ) {
     this.listarUsuarios();
+    this.listarAnalisis();
    }
 
   ngOnInit(): void {
@@ -25,5 +29,13 @@ this.listUsariosService.consultarRegistros().subscribe(dato => {
   console.log(dato);
 });
   }
+
+  private listarAnalisis(){
+    this.listUsariosService.consultarAnalisis().subscribe(dato => {
+      this.registrosAnalisis = [];
+      this.registrosAnalisis = dato;
+      console.log(dato);
+    });
+      }
 
 }

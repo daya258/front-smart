@@ -214,27 +214,56 @@
             "pertenencia_etnica": "Otro",
             "nombre_grupo_etnico": null,
             "ubicacion_recuperado": "Casa"
-        },
+        }
     ],
-    "usuarios": [{
+    "analisis": [{
             "id": 1,
-            "usuario": "test1",
-            "clave": "1"
+            "Ciudad": "Cali",
+            "Femenino": 4,
+            "Masculino": 5,
+            "TotalGeneral": 7
         },
         {
             "id": 2,
-            "usuario": "test2",
-            "clave": "2"
+            "Ciudad": "Cartago",
+            "Femenino": 0,
+            "Masculino": 1,
+            "TotalGeneral": 1
         },
         {
             "id": 3,
-            "usuario": "test3",
-            "clave": "3"
+            "Ciudad": "Cienaga",
+            "Femenino": 1,
+            "Masculino": 0,
+            "TotalGeneral": 1
         },
         {
             "id": 4,
-            "usuario": "test4",
-            "clave": "4"
+            "Ciudad": "Cota",
+            "Femenino": 1,
+            "Masculino": 0,
+            "TotalGeneral": 1
+        },
+        {
+            "id": 5,
+            "Ciudad": "Cucuta",
+            "Femenino": 1,
+            "Masculino": 3,
+            "TotalGeneral": 4
+        },
+        {
+            "id": 6,
+            "Ciudad": "Cumbal",
+            "Femenino": 1,
+            "Masculino": 1,
+            "TotalGeneral": 2
+        },
+        {
+            "id": 7,
+            "Ciudad": "Dosquebradas",
+            "Femenino": 0,
+            "Masculino": 2,
+            "TotalGeneral": 2
         }
     ],
     "profile": {

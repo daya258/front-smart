@@ -10,6 +10,9 @@ import { VistaTablaComponent } from '../app/features/feature/vista-tabla/vista-t
 import { AuthInterceptorService } from './filtrar-http/auth-interceptor.service';
 import { FeatureComponent } from './features/feature/feature.component';
 import { LoginComponent } from '../app/features/feature/login/login.component';
+import { TableModule } from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { LoginComponent } from '../app/features/feature/login/login.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule,
+    ButtonModule
   ],
   providers: [
    {
